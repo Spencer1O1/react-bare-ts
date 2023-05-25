@@ -1,3 +1,53 @@
 .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
   padding: 1rem;
+  flex: 1;
+}
+
+.text-box {
+  padding: 1rem;
+  color: white;
+}
+
+.primary-color {
+  color: var(--primary);
+}
+.primary-accent-color {
+  color: var(--primary-accent);
+}
+.secondary-color {
+  color: var(--secondary);
+}
+.secondary-accent-color {
+  color: var(--secondary-accent);
+}
+.neutral-color {
+  color: var(--neutral);
+}
+.neutral-lightest-color {
+  color: var(--neutral-lightest);
+}
+
+.primary-background {
+  background: var(--primary);
+}
+.primary-accent-background {
+  background: var(--primary-accent);
+}
+.secondary-background {
+  background: var(--secondary);
+}
+.secondary-accent-background {
+  background: var(--secondary-accent);
+}
+.neutral-background {
+  background: var(--neutral);
+}
+.neutral-lightest-background {
+  background: var(--neutral-lightest);
 }

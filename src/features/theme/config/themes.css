@@ -1,0 +1,26 @@
+[data-theme='default'] {
+  --primary: #ff461c;
+  --primary-accent: #ffc759;
+  --secondary: #9bc4cb;
+  --secondary-accent: #9197ae;
+  --neutral: #1e2d2f;
+  --neutral-lightest: #e6eeef;
+}
+
+[data-theme='light'] {
+  --primary: #ff461c;
+  --primary-accent: #ffc759;
+  --secondary: #9bc4cb;
+  --secondary-accent: #9197ae;
+  --neutral: #1e2d2f;
+  --neutral-lightest: #e6eeef;
+}
+
+[data-theme='dark'] {
+  --primary: #000000;
+  --primary-accent: #000000;
+  --secondary: #000000;
+  --secondary-accent: #000000;
+  --neutral: #000000;
+  --neutral-lightest: #000000;
+}

@@ -1,25 +1,30 @@
 import { useState, useContext, createContext } from 'react';
-import { darkTheme, emptyTheme, lightTheme } from './data/themes';
-import { type Theme } from './types';
-
-export { lightTheme, darkTheme };
+import { Theme } from './config/themes';
+import { PrivateTheme } from './data/private-themes';
+import './config/themes.css';
 
 interface IThemeContext {
-  theme: Theme;
-  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  theme: Theme | PrivateTheme;
+  setTheme: React.Dispatch<React.SetStateAction<Theme | PrivateTheme>>;
 }
 
 const initialState: IThemeContext = {
-  theme: emptyTheme,
+  theme: PrivateTheme.DEFAULT,
   setTheme: () => {}
 };
 
 const ThemeContext = createContext<IThemeContext>(initialState);
 
+export { Theme };
+
 export const useTheme = (): IThemeContext => useContext(ThemeContext);
 
-export const ThemeProvider = ({ children, defaultTheme }: { children: React.ReactNode; defaultTheme: Theme }): JSX.Element => {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+export const ThemeProvider = ({ children, defaultTheme }: { children: React.ReactNode; defaultTheme?: Theme }): JSX.Element => {
+  const [theme, setTheme] = useState<Theme | PrivateTheme>(defaultTheme || PrivateTheme.DEFAULT);
 
-  return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div data-theme={theme}>{children}</div>
+    </ThemeContext.Provider>
+  );
 };
