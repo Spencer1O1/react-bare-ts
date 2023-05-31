@@ -1,0 +1,5 @@
+.text-box {
+  padding: 1rem;
+  color: white;
+  background: var(--neutral);
+}

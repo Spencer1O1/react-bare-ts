@@ -49,7 +49,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     "no-restricted-imports": [
-      "error", { "patterns": ["@features/*/*"] }
+      "error", { "patterns": ["@features/*/*", '@layouts/*/*', '@pages/*/*'] }
     ],
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off'

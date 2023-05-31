@@ -19,8 +19,16 @@ export { Theme };
 
 export const useTheme = (): IThemeContext => useContext(ThemeContext);
 
-export const ThemeProvider = ({ children, defaultTheme }: { children: React.ReactNode; defaultTheme?: Theme }): JSX.Element => {
-  const [theme, setTheme] = useState<Theme | PrivateTheme>(defaultTheme || PrivateTheme.DEFAULT);
+export const ThemeProvider = ({
+  children,
+  defaultTheme
+}: {
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+}): JSX.Element => {
+  const [theme, setTheme] = useState<Theme | PrivateTheme>(
+    defaultTheme || PrivateTheme.DEFAULT
+  );
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

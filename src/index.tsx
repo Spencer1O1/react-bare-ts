@@ -5,7 +5,9 @@ import { reportWebVitals } from './reportWebVitals';
 import { Theme, ThemeProvider } from '@features/theme';
 import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 root.render(
   <React.StrictMode>
     <ThemeProvider defaultTheme={Theme.LIGHT}>

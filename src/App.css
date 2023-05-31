@@ -1,17 +1,5 @@
 .app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
-  padding: 1rem;
-  flex: 1;
-}
-
-.text-box {
-  padding: 1rem;
-  color: white;
+  background: var(--neutral-lightest);
 }
 
 .primary-color {
